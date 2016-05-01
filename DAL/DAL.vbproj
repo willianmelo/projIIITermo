@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Dados.vb" />
     <Compile Include="DALCliente.vb" />
+    <Compile Include="DALFuncionaio.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
