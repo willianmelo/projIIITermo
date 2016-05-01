@@ -13,7 +13,6 @@ Public Class DALCliente
 
 
     Public Sub Inserir(objBLL As Cliente)
-
         IniciarObjetos()
 
         cmd.CommandText = "insert into Clientes (cli_nome, cli_telefone, cli_datanasc, cli_datacadastro, cli_rg) values (@nome,@telefone,@datanasc, @datacad, @rg)"
