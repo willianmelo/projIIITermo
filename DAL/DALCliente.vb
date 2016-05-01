@@ -11,6 +11,7 @@ Public Class DALCliente
         LimparObjetos()
     End Sub
 
+
     Public Sub Inserir(objBLL As Cliente)
 
         IniciarObjetos()
