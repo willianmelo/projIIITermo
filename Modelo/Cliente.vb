@@ -14,4 +14,8 @@
         Me.dataCad = _dataCad
         Me.rg = _rg
     End Sub
+
+    Public Sub New()
+
+    End Sub
 End Class

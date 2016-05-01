@@ -32,7 +32,7 @@ Public Class DALCliente
 
         IniciarObjetos()
 
-        cmd.CommandText = "update Clientes set cli_nome = @nome, cli_telefone = @telefone, cli_datanasc = @datanasc, rg = @rg where cli_codigo = @codigo"
+        cmd.CommandText = "update Clientes set cli_nome = @nome, cli_telefone = @telefone, cli_datanasc = @datanasc, cli_rg = @rg where cli_codigo = @codigo"
         cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = objBLL.nome
         cmd.Parameters.Add("@telefone", SqlDbType.VarChar).Value = objBLL.telefone
         cmd.Parameters.Add("@datanasc", SqlDbType.VarChar).Value = objBLL.DataNasc
@@ -44,6 +44,19 @@ Public Class DALCliente
         LimparObjetos()
 
     End Sub
+
+    Public Function Pesquisar(nome As String)
+
+        IniciarObjetos()
+
+        cmd.CommandText = "select * from vwClientes where Nome like @nome "
+        cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = "%" & nome & "%"
+
+        Return objD.executaConsulta(cmd)
+
+        LimparObjetos()
+
+    End Function
 
     Public Function Pesquisar(codigo As Integer)
 
