@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Public Class Dados
 
-    Dim con As New SqlConnection("data source = will; initial catalog= bdFPC; integrated security = true;")
+    Dim con As New SqlConnection("data source = will; initial catalog= bdViacaoToledo; integrated security = true;")
 
     Function abreConexao() As Boolean
         Try

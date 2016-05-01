@@ -20,11 +20,19 @@ Public Class BLLCliente
 
     End Sub
 
+    Public Function Pesquisar(codigo As Integer)
+
+        objD = New DALCliente
+        Return objD.Pesquisar(codigo)
+
+    End Function
+
     Public Function ValidarCamposObrigatorios(objCliente As Cliente)
 
         If (objCliente.nome.Length = 0 Or
-            objCliente.DataNasc.Length = 0 Or
-            objCliente.telefone.Length = 0) Then
+            objCliente.dataNasc.Length = 0 Or
+            objCliente.telefone.Length = 0 Or
+            objCliente.rg.Length = 0) Then
 
             Return False
         End If
