@@ -11,8 +11,8 @@ Public Class DALCliente
         LimparObjetos()
     End Sub
 
-    Public Sub Inserir(objBLL As Cliente)
 
+    Public Sub Inserir(objBLL As Cliente)
         IniciarObjetos()
 
         cmd.CommandText = "insert into Clientes (cli_nome, cli_telefone, cli_datanasc, cli_datacadastro, cli_rg) values (@nome,@telefone,@datanasc, @datacad, @rg)"
@@ -23,7 +23,6 @@ Public Class DALCliente
         cmd.Parameters.Add("@rg", SqlDbType.VarChar).Value = objBLL.rg
 
         objD.executaCmd(cmd)
-
         LimparObjetos()
 
     End Sub
