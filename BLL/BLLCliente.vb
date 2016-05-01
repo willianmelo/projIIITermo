@@ -11,7 +11,7 @@ Public Class BLLCliente
         objD = New DALCliente
         objD.Inserir(objCliente)
         objD = Nothing
-
+        'teste git DRIw
     End Sub
 
     Public Sub Alterar(objCliente As Cliente)
