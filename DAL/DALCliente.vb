@@ -23,7 +23,6 @@ Public Class DALCliente
         cmd.Parameters.Add("@rg", SqlDbType.VarChar).Value = objBLL.rg
 
         objD.executaCmd(cmd)
-
         LimparObjetos()
 
     End Sub
